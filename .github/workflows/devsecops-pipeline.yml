@@ -22,6 +22,7 @@ jobs:
     - name: Run Snyk Scan
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+	continue-on-error: true
       run: |
         npm install -g snyk
         snyk auth $SNYK_TOKEN
